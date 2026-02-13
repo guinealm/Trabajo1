@@ -1,0 +1,2 @@
+- Rehacer layout
+- Repasar que todas las funciones de HTML5 (HTML y CSS) están en el trabajo

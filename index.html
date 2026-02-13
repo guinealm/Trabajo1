@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Asociación de Comerciantes Haro</title>
+  <meta name="description" content="Portal de la Asociación de Comerciantes: noticias, comercios, eventos y contacto.">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- FILA 1: CABECERA (100%) -->
+  <header id="cabecera">
+<div class="wrap cabecera-inner">
+  <div class="cabecera-texto">
+    <p class="kicker">Portal oficial</p>
+    <h1>Asociación de Comerciantes Haro</h1>
+    <p class="tagline">Comercio local, calidad y cercanía.</p>
+  </div>
+
+  <img id="logo" src="img/logo.webp" alt="Logotipo de la Asociación" width="520" height="180">
+</div>
+
+  </header>
+
+  <!-- GRID DE PÁGINA (según tu layout) -->
+  <main id="layout" aria-label="Contenido principal">
+
+    <!-- FILA 2 IZQ: MENÚ (vertical) -->
+    <nav id="menu" aria-label="Menú de navegación">
+      <h2 class="sr-only">Navegación</h2>
+      <ul>
+        <li><a href="#que-hacemos">Qué hacemos</a></li>
+        <li><a href="#comercios">Comercios</a></li>
+        <li><a href="#eventos">Eventos y agenda</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="inscripcion.html">Inscripción</a></li>
+      </ul>
+    </nav>
+
+    <!-- FILA 2 DER (y fila 3 der): NOTICIAS (vertical) -->
+    <section id="noticias" aria-labelledby="noticias-title">
+      <header class="panel-head">
+        <h2 id="noticias-title">Noticias</h2>
+      </header>
+
+      <article class="noticia">
+        <h3>Arranca “Compra Cerca 2026”</h3>
+        <p class="meta"><time datetime="2026-02-01">1 feb 2026</time></p>
+        <p>Sorteos semanales con tickets de compra en comercios adheridos.</p>
+      </article>
+
+      <article class="noticia">
+        <h3>Convenio con paquetería</h3>
+        <p class="meta"><time datetime="2026-01-18">18 ene 2026</time></p>
+        <p>Tarifas reducidas y recogida diaria para asociados.</p>
+      </article>
+
+      <article class="noticia">
+        <h3>Taller: foto de producto con móvil</h3>
+        <p class="meta"><time datetime="2026-02-12">12 feb 2026</time></p>
+        <p>Iluminación, fondos y edición sencilla. Plazas limitadas.</p>
+      </article>
+
+      <article class="noticia">
+        <h3>Campaña “Escaparates de Invierno”</h3>
+        <p class="meta"><time datetime="2026-02-05">5 feb 2026</time></p>
+        <p>Ruta de escaparates con votación popular y premio final.</p>
+      </article>
+
+      <article class="noticia">
+        <h3>Nuevo directorio online de comercios</h3>
+        <p class="meta"><time datetime="2026-01-30">30 ene 2026</time></p>
+        <p>Alta de ficha de comercio y mejoras de visibilidad local.</p>
+      </article>
+    </section>
+
+    <!-- FILA 3 IZQ: HERO (placeholder) -->
+    <section id="hero" aria-label="Imagen principal">
+      <figure class="hero-figure">
+        <img src="img/calles_haro.webp" alt="Calle comercial de Haro" width="1200" height="650">
+        <figcaption class="meta">Calle comercial con escaparates y peatones en Haro.</figcaption>
+      </figure>
+    </section>
+
+    <!-- FILA 4: QUÉ HACEMOS (100%) -->
+    <section id="que-hacemos" aria-labelledby="qh-title">
+      <header class="panel-head">
+        <h2 id="qh-title">Qué hacemos</h2>
+      </header>
+      <div class="panel-body">
+        <p>Coordinamos iniciativas para fortalecer el comercio local y dinamizar la vida del municipio.</p>
+        <ul>
+          <li>Campañas estacionales y promoción conjunta.</li>
+          <li>Formación práctica para comerciantes.</li>
+          <li>Acuerdos con logística, impresión y seguros.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- FILA 5: COMERCIOS (100%) -->
+    <section id="comercios" aria-labelledby="comercios-title">
+      <header class="panel-head">
+        <h2 id="comercios-title">Comercios asociados</h2>
+      </header>
+
+      <div class="cards">
+        <article class="card"><h3>Panadería El Trigal</h3><p class="meta">C/ Mayor 12</p></article>
+        <article class="card"><h3>Librería La Encina</h3><p class="meta">Av. del Parque 8</p></article>
+        <article class="card"><h3>Ferretería Norte</h3><p class="meta">Plaza del Mercado 3</p></article>
+        <article class="card"><h3>Moda Clara</h3><p class="meta">C/ del Río 5</p></article>
+        <article class="card"><h3>Frutería La Huerta</h3><p class="meta">C/ Real 7</p></article>
+        <article class="card"><h3>Óptica Villa Verde</h3><p class="meta">C/ Mayor 30</p></article>
+      </div>
+    </section>
+
+    <!-- FILA 6 IZQ: CONTACTO -->
+    <section id="contacto" aria-labelledby="contacto-title">
+      <header class="panel-head">
+        <h2 id="contacto-title">Contacto</h2>
+      </header>
+      <div class="panel-body">
+        <p><strong>Asociación de Comerciantes Villa Verde</strong></p>
+        <p class="meta">C/ Mayor 20, 1º · 26200 Villa Verde (La Rioja)</p>
+        <p class="meta">Tel: +34 900 123 456 · Email: info@comerciosvillaverde.es</p>
+
+        <div class="oficina">
+          <h3>Oficina de la Asociación</h3>
+          <p class="meta">Horario: L–V 10:00–13:00</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FILA 6 DER: EVENTOS -->
+    <section id="eventos" aria-labelledby="eventos-title">
+      <header class="panel-head">
+        <h2 id="eventos-title">Eventos y agenda</h2>
+      </header>
+      <div class="panel-body">
+        <article class="evento">
+          <h3>Taller: foto de producto con móvil</h3>
+          <p class="meta"><time datetime="2026-02-20T18:00">20 feb 2026, 18:00</time> · Centro Cívico</p>
+        </article>
+        <article class="evento">
+          <h3>Feria de Primavera – Comercio en la Calle</h3>
+          <p class="meta"><time datetime="2026-04-12">12 abr 2026</time> · Calle Mayor</p>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="pie">
+    <div class="wrap">
+      <p class="meta">© 2026 Asociación de Comerciantes Villa Verde · CIF: G-12345678</p>
+    </div>
+  </footer>
+</body>
+</html>
