@@ -90,28 +90,23 @@ a{ color:inherit; }
 }
 
 
-/* GRID PRINCIPAL (según wireframe) */
+/* GRID PRINCIPAL (nuevo orden para “parte superior”) */
 #layout{
   max-width: var(--wrap);
   margin: 18px auto;
   padding: 0 18px;
-  display:grid;
+  display: grid;
   gap: var(--gap);
 
-  /* 2 columnas: izquierda (menu+hero) / derecha (noticias) */
-  grid-template-columns: 1fr 0.8fr;
-
-  /* filas: menu/noticias, hero/noticias, qh, comercios, contacto/eventos */
+  grid-template-columns: 1fr 0.95fr; /* izq más grande, der noticias */
   grid-template-areas:
-    "menu   noticias"
-    "hero   noticias"
-    "qh     qh"
-    "com    com"
-    "cont   eventos";
+    "hero      noticias"
+    "qh        noticias"
+    "com       com"
+    "cont      eventos";
 }
 
-/* Asignación de áreas */
-#menu{ grid-area: menu; }
+/* Asignación de áreas (sin menu) */
 #noticias{ grid-area: noticias; }
 #hero{ grid-area: hero; }
 #que-hacemos{ grid-area: qh; }
@@ -135,26 +130,42 @@ a{ color:inherit; }
 
 .meta{ color: var(--muted); font-size:.95rem; }
 
-/* MENÚ (vertical, como el wireframe) */
-#menu ul{
-  list-style:none;
-  margin:0;
-  padding: 10px;
-  display:grid;
-  gap: 8px;
+/* MENÚ (horizontal) */
+#menu{
+  position: sticky;
+  top: 0;
+  z-index: 60;
+  background: rgba(17,26,43,.78);
+  border-bottom: 1px solid var(--border);
+;
+  backdrop-filter: blur(10px);
 }
+
+#menu ul{
+  max-width: var(--wrap);
+  margin: 0 auto;
+  padding: 10px 18px;
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
 #menu a{
-  display:block;
+  display: inline-block;
   padding: 10px 12px;
   border-radius: 12px;
   border: 1px solid transparent;
   font-weight: 800;
-  text-decoration:none;
+  text-decoration: none;
 }
+
 #menu a:hover{
   border-color: var(--border);
   background: rgba(255,255,255,.06);
 }
+
 
 /* HERO */
 .hero-figure{ margin:0; }
@@ -235,4 +246,22 @@ a{ color:inherit; }
   }
   .cards{ grid-template-columns: 1fr; }
   .hero-figure img{ height: 240px; }
+}
+
+/* Qué hacemos compacto en la parte superior */
+#que-hacemos .panel-body{
+  padding: 12px 14px;  /* un poco menos */
+}
+
+#que-hacemos{
+  /* Limita altura para que “suba” y no empuje hacia abajo */
+  max-height: 260px;
+}
+
+#que-hacemos .panel-body{
+  overflow: hidden; /* “corta” el contenido si no cabe */
+}
+
+#que-hacemos ul{
+  margin-top: 8px;
 }
