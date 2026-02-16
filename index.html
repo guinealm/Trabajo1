@@ -4,25 +4,22 @@ Objetivo: portal informativo maquetado con HTML5 + CSS3.
 
 Mapa del documento (HTML5 semántico):
 - header#cabecera  : cabecera + branding
-<!-- NAV (HTML5): bloque principal de navegación -->
-
-- nav#menu         : navegación principal
-<!-- MAIN (HTML5): contenido principal; layout en CSS Grid -->
-
-- main#layout      : rejilla principal (CSS Grid)
-  - section#hero       : imagen principal (figure/figcaption)
-  - section#noticias   : zona de noticias (article + time datetime)
-  - section#que-hacemos: servicios / propuesta de valor
-  - section#comercios  : listado verosímil de comercios (cards)
-  - section#eventos    : próximos eventos
-  - section#contacto   : datos de contacto
-- footer#pie       : pie de página
+- nav#menu : navegación principal
+- main#layout : rejilla principal (CSS Grid)
+- section#hero : imagen principal (figure/figcaption)
+- section#noticias : zona de noticias (article + time datetime)
+- section#que-hacemos: servicios / propuesta de valor
+- section#comercios : listado verosímil de comercios (cards)
+- section#eventos : próximos eventos
+- section#contacto : datos de contacto
+- footer#pie : pie de página
 
 Pendiente (se hará en archivo aparte): formulario de inscripción con tipos HTML5.
 -->
 
 <!doctype html>
 <html lang="es">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -34,41 +31,43 @@ Pendiente (se hará en archivo aparte): formulario de inscripción con tipos HTM
 <body>
   <!-- FILA 1: CABECERA (100%) -->
   <header id="cabecera">
-<div class="wrap cabecera-inner">
-  <div class="cabecera-texto">
-    <p class="kicker">Portal oficial</p>
-    <h1>Asociación de Comerciantes Haro</h1>
-    <p class="tagline">Comercio local, calidad y cercanía.</p>
-  </div>
+    <div class="wrap cabecera-inner">
+      <div class="cabecera-texto">
+        <p class="kicker">Portal oficial</p>
+        <h1>Asociación de Comerciantes Haro</h1>
+        <p class="tagline">Comercio local, calidad y cercanía.</p>
+      </div>
 
-  <img id="logo" src="img/logo.webp" alt="Logotipo de la Asociación" width="520" height="180">
-</div>
+      <img id="logo" src="img/logo.webp" alt="Logotipo de la Asociación" width="520" height="180">
+    </div>
 
   </header>
 
   <!-- MENÚ HORIZONTAL (fuera del grid principal) -->
-<nav id="menu" aria-label="Menú de navegación">
-  <h2 class="sr-only">Navegación</h2>
-  <ul>
-    <li><a href="#que-hacemos">Qué hacemos</a></li>
-    <li><a href="#comercios">Comercios</a></li>
-    <li><a href="#eventos">Eventos y agenda</a></li>
-    <li><a href="#contacto">Contacto</a></li>
-    <li><a href="inscripcion.html">Inscripción</a></li>
-  </ul>
-</nav>
-<!-- GRID DE PÁGINA (según tu layout) -->
+  <nav id="menu" aria-label="Menú de navegación">
+    <h2 class="sr-only">Navegación</h2>
+    <ul>
+      <li><a href="#que-hacemos">Qué hacemos</a></li>
+      <li><a href="#comercios">Comercios</a></li>
+      <li><a href="#eventos">Eventos y agenda</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+      <li><a href="inscripcion.html">Inscripción</a></li>
+      <li><a href="#avisos">Avisos</a></li>
+
+    </ul>
+  </nav>
+  <!-- GRID DE PÁGINA (según tu layout) -->
   <main id="layout" aria-label="Contenido principal">
 
-   
-    
+
+
 
     <!-- FILA 2 DER (y fila 3 der): NOTICIAS (vertical) -->
     <section id="noticias" aria-labelledby="noticias-title">
       <header class="panel-head">
         <h2 id="noticias-title">Noticias</h2>
       </header>
-<!-- TIME (HTML5): fecha legible + atributo datetime para formato máquina -->
+      <!-- TIME (HTML5): fecha legible + atributo datetime para formato máquina -->
 
       <article class="noticia">
         <h3>Arranca “Compra Cerca 2026”</h3>
@@ -100,6 +99,28 @@ Pendiente (se hará en archivo aparte): formulario de inscripción con tipos HTM
         <p>Alta de ficha de comercio y mejoras de visibilidad local.</p>
       </article>
     </section>
+
+<aside id="avisos" aria-labelledby="avisos-title">
+  <header class="section-header">
+    <h2 id="avisos-title">Avisos</h2>
+    <p class="section-subtitle">Información útil para vecinos y comercios</p>
+  </header>
+
+  <div class="aside-box">
+    <h3>Campaña “Compra en Haro”</h3>
+    <p>
+      Del <time datetime="2026-02-20">20/02/2026</time> al
+      <time datetime="2026-03-10">10/03/2026</time>. Sorteo de vales de compra entre
+      quienes compren en comercios asociados.
+    </p>
+    <ul class="bullets">
+      <li>Participación automática con ticket</li>
+      <li>Puntos de información en comercios adheridos</li>
+      <li>Más detalles próximamente</li>
+    </ul>
+  </div>
+</aside>
+
 
     <!-- FILA 3 IZQ: HERO (placeholder) -->
     <section id="hero" aria-label="Imagen principal">
@@ -133,12 +154,30 @@ Pendiente (se hará en archivo aparte): formulario de inscripción con tipos HTM
       </header>
 
       <div class="cards">
-        <article class="card"><h3>Panadería El Trigal</h3><p class="meta">C/ Mayor 12</p></article>
-        <article class="card"><h3>Librería La Encina</h3><p class="meta">Av. del Parque 8</p></article>
-        <article class="card"><h3>Ferretería Norte</h3><p class="meta">Plaza del Mercado 3</p></article>
-        <article class="card"><h3>Moda Clara</h3><p class="meta">C/ del Río 5</p></article>
-        <article class="card"><h3>Frutería La Huerta</h3><p class="meta">C/ Real 7</p></article>
-        <article class="card"><h3>Óptica Villa Verde</h3><p class="meta">C/ Mayor 30</p></article>
+        <article class="card">
+          <h3>Panadería El Trigal</h3>
+          <p class="meta">C/ Mayor 12</p>
+        </article>
+        <article class="card">
+          <h3>Librería La Encina</h3>
+          <p class="meta">Av. del Parque 8</p>
+        </article>
+        <article class="card">
+          <h3>Ferretería Norte</h3>
+          <p class="meta">Plaza del Mercado 3</p>
+        </article>
+        <article class="card">
+          <h3>Moda Clara</h3>
+          <p class="meta">C/ del Río 5</p>
+        </article>
+        <article class="card">
+          <h3>Frutería La Huerta</h3>
+          <p class="meta">C/ Real 7</p>
+        </article>
+        <article class="card">
+          <h3>Óptica Villa Verde</h3>
+          <p class="meta">C/ Mayor 30</p>
+        </article>
       </div>
     </section>
 
@@ -184,4 +223,5 @@ Pendiente (se hará en archivo aparte): formulario de inscripción con tipos HTM
     </div>
   </footer>
 </body>
+
 </html>

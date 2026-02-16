@@ -127,6 +127,8 @@ a{ color:inherit; }
 /* Asignación de áreas (sin menu) */
 #noticias{ grid-area: noticias; }
 #hero{ grid-area: hero; }
+#avisos{ grid-area: avisos; }
+
 #que-hacemos{ grid-area: qh; }
 #comercios{ grid-area: com; }
 #contacto{ grid-area: cont; }
@@ -255,6 +257,7 @@ a{ color:inherit; }
     grid-template-areas:
       "hero"
       "noticias"
+      "avisos"
       "qh"
       "com"
       "eventos"
@@ -281,4 +284,17 @@ a{ color:inherit; }
 
 #que-hacemos ul{
   margin-top: 8px;
+}
+
+#avisos { grid-area: avisos; }
+#avisos .aside-box{
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border);
+  border-radius: 16px;              /* REQ CSS3: bordes curvos */
+  padding: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.18); /* REQ CSS3: sombreado */
+}
+
+#avisos h3{
+  margin-top: 0;
 }
