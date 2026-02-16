@@ -1,3 +1,17 @@
+/* =========================================================
+   TRABAJO 1 (UNED) – style.css
+   Estructura del CSS (para mantenimiento y evaluación):
+   1) Variables / base (colores, tipografía)
+   2) Layout general (grid principal)
+   3) Cabecera y navegación (incluye bordes/sombras CSS3)
+   4) Secciones: hero / noticias / comercios / eventos / contacto
+   5) Componentes reutilizables (cards, botones, helpers)
+   6) Responsive (media queries)
+   Requisitos del enunciado:
+   - CSS3 bordes curvos: border-radius
+   - CSS3 sombreado: box-shadow
+========================================================= */
+
 :root{
   --bg:#0b1220;
   --panel: rgba(17,26,43,.70);
@@ -70,8 +84,12 @@ a{ color:inherit; }
 #logo{
   width: min(520px, 42vw);  /* grande pero responsivo */
   height: auto;
+  /* REQ CSS3: bordes curvos (border-radius) */
+/* REQ CSS3: sombreado (box-shadow) */
+
   border-radius: 18px;
   border: 1px solid var(--border);
+
   box-shadow: var(--shadow);
   background: rgba(255,255,255,.03);
   padding: 6px;            /* pequeño marco */

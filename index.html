@@ -1,3 +1,26 @@
+<!--
+TRABAJO 1 (UNED) – Asociación de Comerciantes de Haro
+Objetivo: portal informativo maquetado con HTML5 + CSS3.
+
+Mapa del documento (HTML5 semántico):
+- header#cabecera  : cabecera + branding
+<!-- NAV (HTML5): bloque principal de navegación -->
+
+- nav#menu         : navegación principal
+<!-- MAIN (HTML5): contenido principal; layout en CSS Grid -->
+
+- main#layout      : rejilla principal (CSS Grid)
+  - section#hero       : imagen principal (figure/figcaption)
+  - section#noticias   : zona de noticias (article + time datetime)
+  - section#que-hacemos: servicios / propuesta de valor
+  - section#comercios  : listado verosímil de comercios (cards)
+  - section#eventos    : próximos eventos
+  - section#contacto   : datos de contacto
+- footer#pie       : pie de página
+
+Pendiente (se hará en archivo aparte): formulario de inscripción con tipos HTML5.
+-->
+
 <!doctype html>
 <html lang="es">
 <head>
@@ -45,6 +68,7 @@
       <header class="panel-head">
         <h2 id="noticias-title">Noticias</h2>
       </header>
+<!-- TIME (HTML5): fecha legible + atributo datetime para formato máquina -->
 
       <article class="noticia">
         <h3>Arranca “Compra Cerca 2026”</h3>
@@ -79,6 +103,8 @@
 
     <!-- FILA 3 IZQ: HERO (placeholder) -->
     <section id="hero" aria-label="Imagen principal">
+      <!-- FIGURE/FIGCAPTION (HTML5): imagen con pie asociado semánticamente -->
+
       <figure class="hero-figure">
         <img src="img/calles_haro.webp" alt="Calle comercial de Haro" width="1200" height="650">
         <figcaption class="meta">Calle comercial con escaparates y peatones en Haro.</figcaption>
