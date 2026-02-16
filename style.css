@@ -137,9 +137,8 @@ a{ color:inherit; }
   z-index: 60;
   background: rgba(17,26,43,.78);
   border-bottom: 1px solid var(--border);
-;
-  backdrop-filter: blur(10px);
 }
+
 
 #menu ul{
   max-width: var(--wrap);
@@ -236,7 +235,6 @@ a{ color:inherit; }
   #layout{
     grid-template-columns: 1fr;
     grid-template-areas:
-      "menu"
       "hero"
       "noticias"
       "qh"
@@ -247,6 +245,7 @@ a{ color:inherit; }
   .cards{ grid-template-columns: 1fr; }
   .hero-figure img{ height: 240px; }
 }
+
 
 /* Qué hacemos compacto en la parte superior */
 #que-hacemos .panel-body{
