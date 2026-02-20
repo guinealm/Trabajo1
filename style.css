@@ -119,6 +119,7 @@ a{ color:inherit; }
   grid-template-columns: 1fr 0.95fr; /* izq más grande, der noticias */
   grid-template-areas:
     "hero      noticias"
+    "avisos     noticias"
     "qh        noticias"
     "com       com"
     "cont      eventos";
