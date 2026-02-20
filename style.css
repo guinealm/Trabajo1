@@ -117,12 +117,11 @@ a{ color:inherit; }
   gap: var(--gap);
 
   grid-template-columns: 1fr 0.95fr; /* izq más grande, der noticias */
-  grid-template-areas:
-    "hero      noticias"
-    "avisos     noticias"
-    "qh        noticias"
-    "com       com"
-    "cont      eventos";
+grid-template-areas:
+  "hero      noticias"
+  "avisos    qh"
+  "com       com"
+  "cont      eventos";
 }
 
 /* Asignación de áreas (sin menu) */
@@ -197,18 +196,28 @@ a{ color:inherit; }
 }
 .hero-figure figcaption{ padding: 10px 14px; }
 
-/* NOTICIAS: columna vertical */
-#noticias{ padding-bottom: 10px; }
+/* NOTICIAS: compacto */
+#noticias{ padding-bottom: 8px; }
+
 .noticia{
-  margin: 12px 12px 0;
-  padding: 6px;
+  margin: 10px 10px 0;
+  padding: 8px 10px;                 /* menos padding */
   background: var(--card);
   border: 1px solid var(--border);
-  border-radius: 14px;
-  box-shadow: 0 10px 18px rgba(0,0,0,.22);
+  border-radius: 12px;
+  box-shadow: 0 8px 14px rgba(0,0,0,.18);
 }
-.noticia h3{ font-size: 1rem; margin-bottom: .4rem; }
-.noticia p{ font-size: .8rem; }
+
+.noticia h3{
+  font-size: .95rem;                 /* un poco menor */
+  margin: 0 0 .25rem;                /* menos espacio */
+}
+
+.noticia .meta{ font-size: .85rem; }
+.noticia p{
+  font-size: .78rem;                 /* un poco menor */
+  margin: 0;
+}
 
 /* COMERCIOS: cards en rejilla (como el wireframe) */
 .cards{
