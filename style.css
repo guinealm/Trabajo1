@@ -354,3 +354,49 @@ grid-template-areas:
     grid-template-columns: 1fr;
   }
 }
+/* QUÉ HACEMOS: split Servicios / Actividades (sin fondos ajenos) */
+#que-hacemos .panel-body.qh-split{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+/* cajas internas con el mismo estilo del sitio */
+#que-hacemos .qh-card{
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 12px;
+  box-shadow: 0 8px 14px rgba(0,0,0,.16);
+}
+
+#que-hacemos .qh-card h3{
+  margin: 0 0 10px;
+  font-size: 1.05rem;
+}
+
+/* lista limpia, sin estilos heredados raros */
+#que-hacemos .qh-list{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#que-hacemos .qh-list li{
+  padding: 8px 10px;
+  margin: 0 0 8px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,.10);
+  background: rgba(0,0,0,.14);
+}
+
+#que-hacemos .qh-list li:last-child{
+  margin-bottom: 0;
+}
+
+/* móvil */
+@media (max-width: 980px){
+  #que-hacemos .panel-body.qh-split{
+    grid-template-columns: 1fr;
+  }
+}
