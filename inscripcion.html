@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Inscripción | Asociación de Comerciantes de Haro</title>
+  <link rel="stylesheet" href="css/inscripcion.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <h1>Alta de comercio</h1>
+    <p>Solicitud de inscripción en la Asociación</p>
+  </header>
+
+  <main class="wrap">
+    <form id="alta-form" action="#" method="post" enctype="multipart/form-data" autocomplete="on">
+      <!-- NOTA: si quisieras desactivar validación del navegador:
+           <form ... novalidate="novalidate">  -->
+      <section class="panel">
+        <h2>Datos del comercio</h2>
+
+        <fieldset>
+          <legend>Identificación</legend>
+
+          <div class="grid2">
+            <label>
+              Nombre comercial *
+              <input
+                type="text"
+                name="nombre_comercial"
+                required
+                autofocus
+                placeholder="Ej.: Librería La Plaza"
+              />
+            </label>
+
+            <label>
+              Razón social
+              <input
+                type="text"
+                name="razon_social"
+                placeholder="Ej.: La Plaza Haro S.L."
+              />
+            </label>
+
+            <label>
+              CIF/NIF *
+              <input
+                type="text"
+                name="cif"
+                required
+                pattern="^[A-Za-z0-9]{8,9}$"
+                title="Introduce 8-9 caracteres alfanuméricos (formato simplificado)."
+                placeholder="Ej.: B12345678"
+                autocomplete="off"
+              />
+            </label>
+
+            <label>
+              Sector / actividad
+              <input list="sectores" name="sector" placeholder="Elige o escribe…" />
+              <datalist id="sectores">
+                <option value="Alimentación"></option>
+                <option value="Hostelería"></option>
+                <option value="Moda"></option>
+                <option value="Servicios"></option>
+                <option value="Tecnología"></option>
+              </datalist>
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Dirección</legend>
+
+          <div class="grid2">
+            <label>
+              Dirección *
+              <input type="text" name="direccion" required placeholder="C/ Ejemplo, 12" />
+            </label>
+
+            <label>
+              Código postal *
+              <input
+                type="text"
+                name="cp"
+                required
+                pattern="^[0-9]{5}$"
+                title="Introduce 5 dígitos."
+                placeholder="26200"
+                inputmode="numeric"
+              />
+            </label>
+
+            <label>
+              Municipio *
+              <input type="text" name="municipio" required value="Haro" />
+            </label>
+
+            <label>
+              Provincia
+              <input type="text" name="provincia" value="La Rioja" />
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Contacto</legend>
+
+          <div class="grid2">
+            <label>
+              Teléfono *
+              <input
+                id="telefono"
+                name="telefono"
+                type="tel"
+                required
+                placeholder="Patrón: 1-234-567-8910"
+                pattern="([0-9]{1}(-[0-9]{3})(-[0-9]{3})(-[0-9]{4}))"
+                title="Formato: 1-234-567-8910"
+              />
+            </label>
+
+            <label>
+              Email *
+              <input type="email" name="email" required placeholder="nombre@dominio.com" />
+            </label>
+
+            <label>
+              Web
+              <input type="url" name="web" placeholder="https://…" />
+            </label>
+
+            <label>
+              Búsqueda interna (demo)
+              <input type="search" name="q" placeholder="Buscar…" />
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Persona de contacto</legend>
+
+          <div class="grid2">
+            <label>
+              Nombre y apellidos *
+              <input type="text" name="contacto_nombre" required />
+            </label>
+
+            <label>
+              Cargo
+              <input type="text" name="contacto_cargo" placeholder="Propietario/a, gerente…" />
+            </label>
+
+            <label class="full">
+              Observaciones (spellcheck activado)
+              <textarea name="observaciones" rows="4" spellcheck="true"
+                placeholder="Horarios, necesidades, comentarios…"></textarea>
+            </label>
+          </div>
+        </fieldset>
+      </section>
+
+      <section class="panel">
+        <h2>Afiliación</h2>
+
+        <fieldset>
+          <legend>Alta y cuota</legend>
+
+          <div class="grid2">
+            <label>
+              Fecha de alta *
+              <input type="date" name="fecha_alta" required />
+            </label>
+
+            <label>
+              Hora preferente de contacto
+              <input type="time" name="hora_contacto" />
+            </label>
+
+            <label>
+              Nº empleados (18–25 demo rango)
+              <input type="number" name="empleados" min="0" max="200" step="1" value="0" />
+            </label>
+
+            <label>
+              Nivel de cuota (15–60, step 15)
+              <input id="cuota" name="cuota" type="number" min="15" max="60" step="15" value="15" />
+            </label>
+
+            <label>
+              Color identificativo (demo)
+              <input type="color" name="color" value="#2f5f8f" />
+            </label>
+
+            <label>
+              Urgencia (range demo)
+              <input id="urgencia" type="range" name="urgencia" min="0" max="10" value="5" />
+            </label>
+
+            <div class="full kpi">
+              <p>Cuota anual estimada:</p>
+              <output id="cuota-output" for="cuota">15</output>
+              <span>€</span>
+            </div>
+
+            <div class="full">
+              <p>Indicador (meter) y progreso (progress) del formulario:</p>
+              <meter id="meter" min="0" max="100" value="0">0%</meter>
+              <progress id="progress" max="100" value="0">0%</progress>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Pago</legend>
+
+          <div class="grid2">
+            <div class="full">
+              <p>Modalidad *</p>
+              <label class="inline">
+                <input type="radio" name="pago" value="domiciliacion" required />
+                Domiciliación
+              </label>
+              <label class="inline">
+                <input type="radio" name="pago" value="transferencia" />
+                Transferencia
+              </label>
+            </div>
+
+            <label class="full">
+              IBAN (si domicilias)
+              <input
+                type="text"
+                name="iban"
+                placeholder="ES00 0000 0000 0000 0000 0000"
+                pattern="^ES[0-9]{2}([ ]?[0-9]{4}){5}$"
+                title="Formato simplificado IBAN España."
+              />
+            </label>
+          </div>
+        </fieldset>
+      </section>
+
+      <section class="panel">
+        <h2>Documentación y consentimientos</h2>
+
+        <fieldset>
+          <legend>Archivos</legend>
+          <label class="full">
+            Logo / imágenes (solo imagen/*)
+            <input type="file" name="imagenes" accept="image/*" multiple="multiple" />
+          </label>
+
+          <label class="full">
+            Documento acreditativo (PDF)
+            <input type="file" name="acreditacion" accept="application/pdf" />
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Consentimientos</legend>
+
+          <label class="check">
+            <input type="checkbox" name="lopd" required />
+            Acepto la política de protección de datos *
+          </label>
+
+          <label class="check">
+            <input type="checkbox" name="comunicaciones" />
+            Autorizo comunicaciones informativas de la Asociación
+          </label>
+        </fieldset>
+      </section>
+
+      <div class="actions">
+        <button type="reset">Borrar</button>
+        <button type="submit">Enviar solicitud</button>
+      </div>
+    </form>
+  </main>
+
+  <script src="inscripcion.js"></script>
+</body>
+</html>

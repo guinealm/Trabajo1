@@ -1,0 +1,47 @@
+:root { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+body { margin: 0; background: #0b1220; color: #111; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 16px; }
+
+.site-header { padding: 18px 16px; background: #111827; color: #fff; }
+.site-header h1 { margin: 0 0 4px; font-size: 1.5rem; }
+.site-header p { margin: 0; opacity: .9; }
+
+.panel { background: #fff; border-radius: 14px; padding: 16px; margin: 14px 0; box-shadow: 0 6px 18px rgba(0,0,0,.06); }
+.panel h2 { margin: 0 0 10px; font-size: 1.1rem; }
+
+fieldset { border: 1px solid #e5e7eb; border-radius: 12px; padding: 12px; margin: 12px 0; }
+legend { padding: 0 8px; font-weight: 600; }
+
+label { display: grid; gap: 6px; font-size: .95rem; }
+input, textarea, button { font: inherit; }
+
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.full { grid-column: 1 / -1; }
+.inline { display: inline-flex; align-items: center; gap: 8px; margin-right: 14px; }
+.check { display: inline-flex; align-items: center; gap: 10px; margin: 6px 0; }
+
+input, textarea {
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  padding: 10px 12px;
+  background: #fff;
+}
+
+/* CSS aplicado a “nuevos campos/atributos” y validación */
+input:required { border-left: 4px solid #111827; }
+input:focus:invalid { outline: 2px solid rgba(220,38,38,.25); border-color: #dc2626; }
+input:focus:valid { outline: 2px solid rgba(16,185,129,.25); border-color: #10b981; }
+
+.kpi { display: flex; align-items: baseline; gap: 8px; }
+#cuota-output { font-size: 1.6rem; font-weight: 700; }
+
+meter, progress { width: 100%; height: 18px; }
+
+.actions { display: flex; gap: 10px; justify-content: flex-end; padding: 10px 0 24px; }
+button { border: 0; border-radius: 12px; padding: 10px 14px; cursor: pointer; }
+button[type="reset"] { background: #e5e7eb; }
+button[type="submit"] { background: #111827; color: #fff; }
+
+@media (max-width: 760px) {
+  .grid2 { grid-template-columns: 1fr; }
+}
