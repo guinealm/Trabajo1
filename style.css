@@ -491,6 +491,27 @@ grid-template-areas:
   max-height: 160px;   /* el límite del “hueco” */
   object-fit: contain; /* se ve entero */
 }
+/* ===== CSS3 Novedades (Trabajo1) ===== */
+:root{
+  --t1-accent-h: 200;
+  --t1-accent-s: 60%;
+  --t1-accent-l: 40%;
+  --t1-shadow: 0 6px 18px rgba(0,0,0,.16);
+  --t1-shadow-soft: 0 3px 10px rgba(0,0,0,.12);
+  --t1-radius: 12px;
+}
+
+/* Tarjeta base reutilizable */
+.t1-card{
+  border-radius: var(--t1-radius);
+  background: #fff;
+  box-shadow: var(--t1-shadow-soft);
+}
+
+/* Títulos destacados */
+.t1-title-shadow{
+  text-shadow: 2px 2px 6px rgba(0,0,0,.55);
+}
 
 /* ===== TARJETAS CON SOMBRA ===== */
 
@@ -511,4 +532,16 @@ grid-template-areas:
 .qh-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
+}
+
+.hero h1,
+#hero h1{
+  color: #fff;
+  text-shadow: 2px 2px 6px rgba(0,0,0,.6);
+}
+
+/* Contorno (usar solo si el fondo es complejo) */
+.hero h1,
+#hero h1{
+  -webkit-text-stroke: 1px rgba(0,0,0,.35);
 }
