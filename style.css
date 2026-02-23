@@ -564,3 +564,12 @@ button:hover,
 input[type="submit"]:hover{
   background: hsla(var(--t1-accent-h), var(--t1-accent-s), calc(var(--t1-accent-l) - 8%), 1);
 }
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible{
+  outline: 3px solid hsla(var(--t1-accent-h), var(--t1-accent-s), 55%, 1);
+  outline-offset: 3px;
+}
