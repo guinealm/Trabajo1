@@ -545,3 +545,22 @@ grid-template-areas:
 #hero h1{
   -webkit-text-stroke: 1px rgba(0,0,0,.35);
 }
+#site-nav,
+nav{
+  background: rgba(10, 20, 35, .88);
+}
+
+.btn,
+button,
+input[type="submit"]{
+  background: hsla(var(--t1-accent-h), var(--t1-accent-s), var(--t1-accent-l), 1);
+  color: #fff;
+  border: 0;
+  border-radius: 10px;
+}
+
+.btn:hover,
+button:hover,
+input[type="submit"]:hover{
+  background: hsla(var(--t1-accent-h), var(--t1-accent-s), calc(var(--t1-accent-l) - 8%), 1);
+}
