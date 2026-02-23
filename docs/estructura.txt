@@ -1,0 +1,91 @@
+
+  <header id="cabecera">
+    <div class="wrap cabecera-inner">
+      <div class="cabecera-texto">
+      </div>
+    </div>
+  </header>
+
+  
+  <nav id="menu" aria-label="Menú de navegación">
+  </nav>
+ 
+  <main id="layout" aria-label="Contenido principal">
+    <section id="noticias" aria-labelledby="noticias-title">
+      <header class="panel-head">
+      </header>
+      <article class="noticia">
+      </article>
+
+      <article class="noticia">
+      </article>
+
+      <article class="noticia">
+      </article>
+
+      <article class="noticia">
+      </article>
+
+      <article class="noticia">
+      </article>
+    </section>
+
+
+    <section id="hero" aria-label="Imagen principal">
+    </section>
+
+    <section id="que-hacemos" aria-labelledby="qh-title">
+      <header class="panel-head">
+      </header>
+      <div class="panel-body qh-split">
+        <section class="qh-card qh-card--servicios" aria-labelledby="servicios-title">
+        </section>
+
+        <section class="qh-card qh-card--actividades" aria-labelledby="actividades-title">
+        </section>
+      </div>
+    </section>
+
+    <section id="comercios" aria-labelledby="comercios-title">
+      <header class="panel-head">
+      </header>
+
+      <div class="cards">
+        <article class="card">
+        </article>
+        <article class="card">
+        </article>
+        <article class="card">
+        </article>
+        <article class="card">
+        </article>
+        <article class="card">
+        </article>
+        <article class="card">
+        </article>
+      </div>
+    </section>
+
+   
+    <section id="contacto" aria-labelledby="contacto-title">
+      <header class="panel-head">
+      </header>
+      <div class="panel-body">
+        <div class="oficina">
+        </div>
+      </div>
+    </section>
+
+  
+    <section id="eventos" aria-labelledby="eventos-title">
+      <header class="panel-head">
+      </header>
+      <div class="panel-body">
+        <article class="evento">
+        </article>
+        <article class="evento">
+        </article>
+      </div>
+    </section>
+
+  </main>
