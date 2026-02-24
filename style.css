@@ -491,3 +491,95 @@ grid-template-areas:
   max-height: 160px;   /* el límite del “hueco” */
   object-fit: contain; /* se ve entero */
 }
+/* ===== CSS3 Novedades (Trabajo1) ===== */
+:root{
+  --t1-accent-h: 200;
+  --t1-accent-s: 60%;
+  --t1-accent-l: 40%;
+  --t1-shadow: 0 6px 18px rgba(0,0,0,.16);
+  --t1-shadow-soft: 0 3px 10px rgba(0,0,0,.12);
+  --t1-radius: 12px;
+}
+
+/* Tarjeta base reutilizable */
+.t1-card{
+  border-radius: var(--t1-radius);
+  background: #fff;
+  box-shadow: var(--t1-shadow-soft);
+}
+
+/* Títulos destacados */
+.t1-title-shadow{
+  text-shadow: 2px 2px 6px rgba(0,0,0,.55);
+}
+
+/* ===== TARJETAS CON SOMBRA ===== */
+
+.noticia,
+.card,
+.evento,
+.qh-card {
+  --bg:#0b1220;
+  background: var(--bg);
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.noticia:hover,
+.card:hover,
+.evento:hover,
+.qh-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
+}
+
+.hero h1,
+#hero h1{
+  color: #fff;
+  text-shadow: 2px 2px 6px rgba(0,0,0,.6);
+}
+
+/* Contorno (usar solo si el fondo es complejo) */
+.hero h1,
+#hero h1{
+  -webkit-text-stroke: 1px rgba(0,0,0,.35);
+}
+#site-nav,
+nav{
+  background: rgba(10, 20, 35, .88);
+}
+
+.btn,
+button,
+input[type="submit"]{
+  background: hsla(var(--t1-accent-h), var(--t1-accent-s), var(--t1-accent-l), 1);
+  color: #fff;
+  border: 0;
+  border-radius: 10px;
+}
+
+.btn:hover,
+button:hover,
+input[type="submit"]:hover{
+  background: hsla(var(--t1-accent-h), var(--t1-accent-s), calc(var(--t1-accent-l) - 8%), 1);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible{
+  outline: 3px solid hsla(var(--t1-accent-h), var(--t1-accent-s), 55%, 1);
+  outline-offset: 3px;
+}
+
+.hero,
+#hero{
+  background: linear-gradient(135deg, #2f5f8f, #16263a);
+  color: #fff;
+}
+footer{
+  background: linear-gradient(180deg, #111827, #0b1220);
+  color: #e5e7eb;
+}
