@@ -446,8 +446,8 @@ grid-template-areas:
 }
 
 #que-hacemos .qh-card--actividades .qh-ico img{
-  width: 80px;          /* ajusta a gusto */
-  height: 70px;
+  width: 180px;          /* ajusta a gusto */
+  height: 170px;
   object-fit: contain;
   display: block;
 }
@@ -582,4 +582,26 @@ textarea:focus-visible{
 footer{
   background: linear-gradient(180deg, #111827, #0b1220);
   color: #e5e7eb;
+}
+/* ===== CSS3 Novedades (Trabajo1) ===== */
+/* ===== CSS3 Novedades (Trabajo1) ===== */
+:root{
+  --t1-accent-h: 200;
+  --t1-accent-s: 60%;
+  --t1-accent-l: 40%;
+  --t1-shadow: 0 6px 18px rgba(0,0,0,.16);
+  --t1-shadow-soft: 0 3px 10px rgba(0,0,0,.12);
+  --t1-radius: 12px;
+}
+
+/* Tarjeta base reutilizable */
+.t1-card{
+  border-radius: var(--t1-radius);
+  background: #fff;
+  box-shadow: var(--t1-shadow-soft);
+}
+
+/* Títulos destacados */
+.t1-title-shadow{
+  text-shadow: 2px 2px 6px rgba(0,0,0,.55);
 }
